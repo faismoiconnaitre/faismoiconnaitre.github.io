@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#contenu span.goldinfo").info(true);});

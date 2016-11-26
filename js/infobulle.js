@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#contenu input.fieldInput").each(function(){$(this).infobulle();});});

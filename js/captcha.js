@@ -1,0 +1,1 @@
+$(document).ready(function(){$("a.refreshimage").click(function(){$(this).refreshImage();return false;});});

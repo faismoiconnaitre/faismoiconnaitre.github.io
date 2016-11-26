@@ -1,0 +1,1 @@
+$(document).ready(function(){var pQuestion=$("#contenu p.question");var width=$("#contenu").css("width");$("#contenu p.reponse").css("width",width);$("#contenu p.reponse").hide();pQuestion.css("cursor","pointer");pQuestion.click(function(){$(this).next("p.reponse").stop().slideToggle();});});
