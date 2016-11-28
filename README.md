@@ -18,7 +18,7 @@ First, clone Fais moi connaitre.com website repository
 
 You can now launch your Virtual Machine (VM):
 
-	cd ${fais moi connaitre.com} && vagrant up
+    cd ${fais moi connaitre.com} && vagrant up
 
 Then, you can ssh to the VM:
 
