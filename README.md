@@ -4,6 +4,10 @@ Fais moi connaitre.com have been shut down on March 10th 2016. The website is no
 
 ## How to generate the static content
 
+### Caution
+
+Some folder are not automatically generated from the repo. Please do not delete these folders.
+
 ### Installation
 
 We will host the dynamic website on your Docker. So, you need to install:
