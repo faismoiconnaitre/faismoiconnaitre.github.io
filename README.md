@@ -6,47 +6,32 @@ Fais moi connaitre.com have been shut down on March 10th 2016. The website is no
 
 ### Installation
 
-We will host the dynamic website on a local Virtual Machine. So, you need to install:
-* VirtualBox
-* Vagrant
+We will host the dynamic website on your Docker. So, you need to install:
+
+* Docker (for Mac ?)
 
 ### File location
 
 First, clone Fais moi connaitre.com website repository
 
-### Run the Virtual Machine
+### Run Docker compose
 
-You can now launch your Virtual Machine (VM):
+You can now launch your Docker compose by the following command:
 
-    cd ${fais moi connaitre.com} && vagrant up
-
-Then, you can ssh to the VM:
-
-    vagrant ssh
-
-### Set up Apache
-
-You need to change Apache configuration file located at *scotchbox.local.conf*:
-
-* You need to replace *DocumentRoot /var/www/public* by *DocumentRoot /var/www/web*
+    docker-compose up
 
 ### Set up MySQL database
 
-You need to configure MySQL database and load the data into MySQL:
+You need to configure MySQL database and load the schema into MySQL:
 
-    mysql -u root -p
-    # the default password is root
-
-    mysql> create database test;
-    mysql> use test;
-    mysql> source /var/www/data/sql/schema.sql
+    docker exec -i faismc-db mysql -uroot -proot test < data/sql/schema.sql
 
 ### Test
 
-Open your browser at *http://192.168.33.10* and you shoud see Fais moi connaitre.com website
+Open your browser at *http://localhost:8080* and you shoud see Fais moi connaitre.com website
 
 ### Generate a static version
 
 Finally, you can generate the static version of the website:
 
-    wget -k -E -r -l 10 -p -N -nH http://192.168.33.10
+    wget -k -E -r -l 10 -p -N -nH http://localhost:8080
